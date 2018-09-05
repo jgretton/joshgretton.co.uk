@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Open+Sans:300,400|Roboto:300,400,500,700|Dosis:400');
+
+
+
+h1{
+    @include font($font-family-h, $color-gray-darker, $font-weight-normal, $line-height);
+    @include fontSize($font-h-lg);
+    margin: 0;
+    padding: 0;
+
+    @media screen and (max-width: $breakpoint-sm){
+        @include fontSize($font-h-sm);
+    }
+    @media screen and (max-width: $breakpoint-md){
+        @include fontSize($font-h-md);
+    }
+    @media screen and (max-width:320px){
+        @include fontSize(25);
+    }
+}
+h2{
+    @include font($font-family-h, $color-gray-dark, $font-weight-normal, $line-height);
+    margin: 0;
+    padding: 0;
+    @include fontSize($font-h-md);
+    margin-bottom: 25px;
+
+    @media screen and (max-width:320px){
+        @include fontSize(30);
+    }
+}
+h3{
+    @include font($font-family-h, $color-gray-dark, $font-weight-normal, $line-height);
+    margin: 0;
+    padding: 0;
+    @include fontSize($font-h-sm);
+    margin-bottom: 10px;
+}
+
+p{
+    @include font($font-family-p,  $color-gray-dark, $font-weight-normal, $line-height);
+    @include fontSize($font-p);
+    margin:  0;
+    padding: 0;
+    opacity: 0.6;
+    letter-spacing:0.2px;
+
+    @media screen and (max-width: 320px){
+        @include fontSize(12);
+    }
+}
+
+a{
+    @include font($font-family-h, $color-offset, $font-weight-light, $line-height);
+    // @include fontSize($font-p);
+    text-decoration: none;
+
+    &:hover{
+        opacity: 1 !important;
+    }
+}
+
+.white{
+    color: $color-white;
+}
