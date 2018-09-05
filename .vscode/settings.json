@@ -1,0 +1,7 @@
+{
+    "editor.fontSize": 10,
+    "editor.lineHeight":25,
+    "editor.minimap.enabled": false,
+    "editor.autoClosingBrackets": true,
+    "html.autoClosingTags": false
+}
