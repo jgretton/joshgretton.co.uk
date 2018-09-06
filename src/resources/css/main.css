@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Open+Sans:300,400|Roboto:300,400,500,700|Dosis:400");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Poppins|Roboto+Slab");
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -379,12 +379,11 @@ template {
   display: none; }
 
 h1 {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #1d1d1d;
   font-weight: 400;
-  line-height: 23px;
-  font-size: 64;
-  font-size: 4rem;
+  font-size: 80;
+  font-size: 5rem;
   margin: 0;
   padding: 0; }
 
@@ -404,15 +403,14 @@ h1 {
     font-size: 1.5625rem; } }
 
 h2 {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #546066;
   font-weight: 400;
   line-height: 23px;
   margin: 0;
   padding: 0;
   font-size: 32;
-  font-size: 2rem;
-  margin-bottom: 25px; }
+  font-size: 2rem; }
 
 @media screen and (max-width: 320px) {
   h2 {
@@ -420,27 +418,24 @@ h2 {
     font-size: 1.875rem; } }
 
 h3 {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #546066;
   font-weight: 400;
   line-height: 23px;
   margin: 0;
   padding: 0;
   font-size: 22;
-  font-size: 1.375rem;
-  margin-bottom: 10px; }
+  font-size: 1.375rem; }
 
 p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #546066;
   font-weight: 400;
   line-height: 23px;
   font-size: 15;
   font-size: 0.9375rem;
   margin: 0;
-  padding: 0;
-  opacity: 0.6;
-  letter-spacing: 0.2px; }
+  padding: 0; }
 
 @media screen and (max-width: 320px) {
   p {
@@ -448,7 +443,7 @@ p {
     font-size: 0.75rem; } }
 
 a {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #484D56;
   font-weight: 300;
   line-height: 23px;
@@ -457,16 +452,25 @@ a {
 a:hover {
   opacity: 1 !important; }
 
-.white {
-  color: #ffffff; }
-
 body {
-  transition: all 300ms ease-in-out; }
+  transition: all 300ms ease-in-out;
+  z-index: 999; }
 
 .darken {
   background-color: rgba(0, 0, 0, 0.4);
   transition: all 300ms ease-in-out;
   overflow: hidden; }
+
+.blue-bg {
+  background-color: blue;
+  color: white !important;
+  display: block; }
+
+.container {
+  height: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative; }
 
 .header {
   width: 100%;
@@ -486,21 +490,31 @@ body {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  z-index: 3; }
+  z-index: 4; }
 
 .menu-bars.close .bar:nth-last-of-type(2) {
   opacity: 0; }
 
+@media screen and (max-width: 480px) {
+  .menu-bars {
+    right: 0; } }
+
 .bar {
   height: 5px;
   width: 70px;
-  background-color: #000000;
+  background-color: #ffffff;
   margin-bottom: 10px; }
 
 .bar:last-of-type {
   width: 50px;
   margin-bottom: 0;
   margin-left: 20px; }
+
+@media screen and (max-width: 480px) {
+  .bar {
+    width: 50px; }
+  .bar:last-of-type {
+    width: 30px; } }
 
 .nav {
   height: 100vh;
@@ -514,11 +528,13 @@ body {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
+  z-index: 3;
   transform: translateX(100%);
-  transition: all 300ms ease-in-out; }
+  transition: all 300ms ease-in-out;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
 
 .nav-link {
   margin-bottom: 50px;
@@ -531,3 +547,43 @@ body {
 .open {
   transform: translateX(0);
   transition: all 300ms ease-in-out; }
+
+.hero {
+  height: 2000px;
+  width: 100%;
+  position: relative;
+  background-color: #0F2B9A;
+  background: url("../images/hero-bg.png") bottom center no-repeat;
+  background-size: cover;
+  margin-top: -70px; }
+
+.hero-content-wrapper {
+  height: 1110px;
+  background: url("../images/hero-bg-wave.png") top left no-repeat;
+  background-size: contain;
+  background-position-y: -130px;
+  margin-right: 70px;
+  position: relative; }
+
+.hero-content {
+  max-width: 473px;
+  height: auto;
+  position: relative;
+  padding-top: 319px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column; }
+
+.hero-content-title {
+  height: 193px;
+  width: auto;
+  text-transform: uppercase;
+  letter-spacing: -2.35px; }
+
+.hero-content-info {
+  min-height: 72px;
+  width: auto; }

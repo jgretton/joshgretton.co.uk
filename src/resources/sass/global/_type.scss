@@ -3,7 +3,7 @@
 
 
 h1{
-    @include font($font-family-h, $color-gray-darker, $font-weight-normal, $line-height);
+    @include font($font-family-h, $color-gray-darker, $font-weight-normal);
     @include fontSize($font-h-lg);
     margin: 0;
     padding: 0;
@@ -23,7 +23,6 @@ h2{
     margin: 0;
     padding: 0;
     @include fontSize($font-h-md);
-    margin-bottom: 25px;
 
     @media screen and (max-width:320px){
         @include fontSize(30);
@@ -34,7 +33,6 @@ h3{
     margin: 0;
     padding: 0;
     @include fontSize($font-h-sm);
-    margin-bottom: 10px;
 }
 
 p{
@@ -42,8 +40,6 @@ p{
     @include fontSize($font-p);
     margin:  0;
     padding: 0;
-    opacity: 0.6;
-    letter-spacing:0.2px;
 
     @media screen and (max-width: 320px){
         @include fontSize(12);
@@ -58,8 +54,4 @@ a{
     &:hover{
         opacity: 1 !important;
     }
-}
-
-.white{
-    color: $color-white;
 }
