@@ -5,4 +5,90 @@
 @import "global/mixins";
 @import "global/type";
 
+//misc
+body{
+    transition: $transition;
+}
+.darken{
+    background-color: rgba(0, 0, 0, .4);
+    transition: $transition;
+    overflow: hidden;
+}
 
+//header
+.header{
+    width: 100%;
+    height: 70px;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo{
+    height: 100%;
+    width: auto;
+
+}
+.menu-bars{
+    position: absolute;
+    height: 35px;
+    width: 70px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 3;
+
+    &.close{
+
+        .bar{
+            &:nth-last-of-type(2){
+                opacity: 0;
+            }
+        }
+
+    }
+}
+
+.bar{
+    height: 5px;
+    width: 70px;
+    background-color: $color-black;
+    margin-bottom: 10px;
+
+    &:last-of-type{
+        width: 50px;
+        margin-bottom: 0;
+        margin-left: 20px;
+    }
+}
+
+.nav{
+    height: 100vh;
+    width: 200px;
+    background-color: $color-white;
+    @include flexbox;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    transform: translateX(100%);
+    transition: $transition;
+
+
+
+    &-link{
+        margin-bottom: 50px;
+        height: auto;
+        width: auto;
+
+        &:last-of-type{margin: 0;}
+    }
+}
+
+.open{
+    transform: translateX(0);
+    transition: $transition;
+}

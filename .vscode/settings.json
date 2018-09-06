@@ -3,5 +3,6 @@
     "editor.lineHeight":25,
     "editor.minimap.enabled": false,
     "editor.autoClosingBrackets": true,
-    "html.autoClosingTags": false
+    "html.autoClosingTags": false,
+    "git.ignoreLimitWarning": true
 }
