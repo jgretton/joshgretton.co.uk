@@ -1,0 +1,18 @@
+.button{
+    height: 56px;
+    padding:11px 32px;
+
+    color: $color-white;
+    text-transform: uppercase;
+    font-family: $font-family-h;
+    @include fontSize(12);
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    &-orange{
+    background-color: $color-orange;
+    }
+}
+

@@ -5,6 +5,9 @@
 @import "global/mixins";
 @import "global/type";
 
+@import "components/button";
+@import "components/work";
+
 //misc
 body{
     transition: $transition;
@@ -20,7 +23,6 @@ body{
     color: white !important; 
     display: block;
 }
-
 
 //container
 .container{
@@ -124,24 +126,38 @@ body{
 
 
 .hero{
-    height: 2000px;
+    height: 1110px;
     width: 100%;
     position: relative;
     background-color: #0F2B9A;
-    background: url('../images/hero-bg.png') bottom center no-repeat;
     background-size: cover;
     margin-top: -70px;
-    // padding-top:70px;
+
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        height: 2275px;
+        width: 100vw;
+        background: url('../images/hero-bg.png') bottom center no-repeat;
+        background-size: cover;
+    }
 
     &-content-wrapper{
         height: 1110px;
-        // max-width: 1157px;
-        background: url('../images/hero-bg-wave.png') top left no-repeat;
-        background-size: contain;
-        // 130px up
         background-position-y: -130px;
         margin-right: 70px;
         position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            display: block;
+            height: 1110px;
+            width: 1157px;
+            background: url('../images/hero-bg-wave.png') top left no-repeat;
+            background-size: contain;
+        }
     }
 
     &-content{
@@ -163,9 +179,12 @@ body{
         &-info{
             min-height: 72px;
             width: auto;
+            margin-top: 16px;
         }
         &-button{
-
+            height: auto;
+            width: auto;
+            margin-top: 26px;
         }
         
     }

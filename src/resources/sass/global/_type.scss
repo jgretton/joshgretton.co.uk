@@ -36,7 +36,7 @@ h3{
 }
 
 p{
-    @include font($font-family-p,  $color-gray-dark, $font-weight-normal, $line-height);
+    @include font($font-family-p,  $color-gray, $font-weight-normal, $line-height);
     @include fontSize($font-p);
     margin:  0;
     padding: 0;
@@ -46,8 +46,13 @@ p{
     }
 }
 
+.heading{
+    @include font($font-family-header, $color-white);
+    @include fontSize(24);
+}
+
 a{
-    @include font($font-family-h, $color-offset, $font-weight-light, $line-height);
+    @include font($font-family-h, $color-gray, $font-weight-light, $line-height);
     // @include fontSize($font-p);
     text-decoration: none;
 

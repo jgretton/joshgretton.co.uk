@@ -1,16 +1,18 @@
 // Colors
-$color-main:         #6D2B2B;
-$color-offset:       #484D56;
 $color-white:        #ffffff;
 $color-black:        #000000;
 $color-gray-darker:  #1d1d1d;
 $color-gray-dark:    #546066;
-$color-gray:         #cbd0d4;
+$color-gray:         #6D7783;
 $color-gray-light:   #DBE1ED;
 
 $color-border-light: #ECECEC;
 
-$BACKGROUND-GRADIENT:linear-gradient(45deg, #726193 20%, $color-main 60%, #ffe4b4);
+$color-yellow:       #FCC01C;
+$color-orange:       #FF794D;
+$color-light-blue:   #84C4FF;
+$color-blue:         #071FC8;
+
 
 //font
 $base__font-size: 16;
@@ -30,7 +32,7 @@ $base__font-size: 16;
 
   
   $font-family-h: 'Oswald', sans-serif;
-
+  $font-family-header: 'Roboto Slab', sans-serif;
   $font-family-p:  'Poppins', sans-serif;
   
   $font-weight-light:  300;

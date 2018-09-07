@@ -1,0 +1,18 @@
+.work-list{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 570px));
+    grid-template-rows: repeat(4, 637px);
+    grid-column-gap: 30px;
+}
+
+.work{
+
+    &-50{
+
+    }
+
+    &-100{
+        grid-column: 1 / 3;
+    }
+}
