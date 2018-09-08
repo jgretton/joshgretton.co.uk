@@ -12,11 +12,11 @@ $color-yellow:       #FCC01C;
 $color-orange:       #FF794D;
 $color-light-blue:   #84C4FF;
 $color-blue:         #071FC8;
+$color-h3:           #363D4F;
 
 
 //font
 $base__font-size: 16;
-@import url('https://fonts.googleapis.com/css?family=Oswald|Poppins|Roboto+Slab');
 
 @function calculateRem($size) {
     $remSize: $size / $base__font-size;

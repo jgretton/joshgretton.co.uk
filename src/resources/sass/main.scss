@@ -24,6 +24,23 @@ body{
     display: block;
 }
 
+.white *{
+    color: $color-white !important;
+}
+
+.divider{
+    height: 2px;
+    width: 87px;
+    position: relative;
+    margin: 32px auto 72px auto;
+
+    &-orange{
+        background-color: $color-orange;
+    }
+
+}
+
+
 //container
 .container{
     height: 100%;
@@ -144,7 +161,7 @@ body{
     }
 
     &-content-wrapper{
-        height: 1110px;
+        min-height: 980px;
         background-position-y: -130px;
         margin-right: 70px;
         position: relative;
@@ -153,7 +170,7 @@ body{
             content: "";
             position: absolute;
             display: block;
-            height: 1110px;
+            min-height: 980px;
             width: 1157px;
             background: url('../images/hero-bg-wave.png') top left no-repeat;
             background-size: contain;
@@ -175,6 +192,7 @@ body{
             width: auto;
             text-transform: uppercase;
             letter-spacing: -2.35px;
+            position: relative;
         }
         &-info{
             min-height: 72px;
@@ -188,6 +206,31 @@ body{
         }
         
     }
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-orange;
+    position: relative;
+    border-radius: 50%;
+}
+
+//projects
+
+.projects{
+    margin-top: -70px;
+    position: relative;
+    height: auto;
+    width: auto;
+}
+.projects-title{
+    text-align: center;
+    max-width: 834px;
+    height: auto;
+    margin: 0 auto;
 }
 
 

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Open+Sans:300,400|Roboto+Slab:300,400,500,700|Dosis:400');
-
+@import url('https://fonts.googleapis.com/css?family=Oswald|Poppins|Roboto+Slab:300,400');
 
 
 h1{
@@ -29,10 +28,11 @@ h2{
     }
 }
 h3{
-    @include font($font-family-h, $color-gray-dark, $font-weight-normal, $line-height);
+    @include font($font-family-h, $color-h3, $font-weight-normal, 27px);
     margin: 0;
     padding: 0;
-    @include fontSize($font-h-sm);
+    @include fontSize(18);
+    text-transform: uppercase;
 }
 
 p{
@@ -47,8 +47,13 @@ p{
 }
 
 .heading{
-    @include font($font-family-header, $color-white);
+    @include font($font-family-header, $color-white, $font-weight-light, 36px);
     @include fontSize(24);
+}
+
+.tag{
+    @include font($font-family-p, $color-gray, $font-weight-normal, 16px);
+    @include fontSize(13);
 }
 
 a{
