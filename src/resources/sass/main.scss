@@ -20,6 +20,7 @@ body{
 }
 .blue-bg{
     background-color: blue;
+    padding: 0 7px;
     color: white !important; 
     display: block;
 }
@@ -143,7 +144,7 @@ body{
 
 
 .hero{
-    height: 1110px;
+    max-height: 1110px;
     width: 100%;
     position: relative;
     background-color: #0F2B9A;
@@ -155,6 +156,7 @@ body{
         position: absolute;
         display: block;
         height: 2275px;
+        min-height: 1600px;
         width: 100vw;
         background: url('../images/hero-bg.png') bottom center no-repeat;
         background-size: cover;
@@ -170,7 +172,7 @@ body{
             content: "";
             position: absolute;
             display: block;
-            min-height: 980px;
+            height: 980px;
             width: 1157px;
             background: url('../images/hero-bg-wave.png') top left no-repeat;
             background-size: contain;
@@ -182,17 +184,25 @@ body{
         height: auto;
         position: relative;
         padding-top: 319px;
-        box-sizing: border-box;
+        // box-sizing: border-box;
+        padding-left: 50px;
 
         @include flexbox;
         flex-direction: column;
 
+        @media screen and (max-width: $breakpoint-sm){
+            padding-top: 200px;
+        }
+
         &-title{
-            height: 193px;
+            max-height: 193px;
             width: auto;
             text-transform: uppercase;
             letter-spacing: -2.35px;
             position: relative;
+            h1 {
+                display: inline-block;
+            }
         }
         &-info{
             min-height: 72px;
@@ -207,15 +217,19 @@ body{
         
     }
 }
-.dot{
+.dot{   
+    position: relative;
+    &::before{
+        display: block;
+        content: "";
     height: 20px;
     width: 20px;
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 0;
+    right: -25px;
     background-color: $color-orange;
-    position: relative;
     border-radius: 50%;
+    }
 }
 
 //projects

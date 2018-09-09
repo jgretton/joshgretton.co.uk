@@ -7,14 +7,14 @@ h1{
     margin: 0;
     padding: 0;
 
-    @media screen and (max-width: $breakpoint-sm){
-        @include fontSize($font-h-sm);
+    @media screen and (max-width: 595px){
+        @include fontSize(52);
     }
-    @media screen and (max-width: $breakpoint-md){
-        @include fontSize($font-h-md);
-    }
-    @media screen and (max-width:320px){
-        @include fontSize(25);
+    // @media screen and (max-width: $breakpoint-md){
+    //     @include fontSize($font-h-md);
+    // }
+    @media screen and (max-width:366px){
+        @include fontSize(44);
     }
 }
 h2{

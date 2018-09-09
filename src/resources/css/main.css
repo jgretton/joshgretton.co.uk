@@ -386,20 +386,15 @@ h1 {
   margin: 0;
   padding: 0; }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 595px) {
   h1 {
-    font-size: 22;
-    font-size: 1.375rem; } }
+    font-size: 52;
+    font-size: 3.25rem; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 366px) {
   h1 {
-    font-size: 32;
-    font-size: 2rem; } }
-
-@media screen and (max-width: 320px) {
-  h1 {
-    font-size: 25;
-    font-size: 1.5625rem; } }
+    font-size: 44;
+    font-size: 2.75rem; } }
 
 h2 {
   font-family: "Oswald", sans-serif;
@@ -487,13 +482,19 @@ a:hover {
 .work-list {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 570px));
-  grid-template-rows: repeat(4, 637px);
+  grid-template-columns: repeat(auto-fill, minmax(auto, 537px));
+  grid-template-rows: repeat(auto-fill, minmax(1fr, 637px));
   grid-column-gap: 30px;
-  grid-row-gap: 30px; }
+  grid-row-gap: 30px;
+  padding: 0 10px; }
 
-.work-50 {
-  grid-column: auto; }
+.work {
+  column-span: 1 / 2; }
+
+@media screen and (max-width: 480px) {
+  .work-50 {
+    padding: 0 10px;
+    grid-column: 1 / 3; } }
 
 .work-100 {
   grid-column: 1 / 3; }
@@ -533,6 +534,7 @@ body {
 
 .blue-bg {
   background-color: blue;
+  padding: 0 7px;
   color: white !important;
   display: block; }
 
@@ -631,7 +633,7 @@ body {
   transition: all 300ms ease-in-out; }
 
 .hero {
-  height: 1110px;
+  max-height: 1110px;
   width: 100%;
   position: relative;
   background-color: #0F2B9A;
@@ -643,6 +645,7 @@ body {
   position: absolute;
   display: block;
   height: 2275px;
+  min-height: 1600px;
   width: 100vw;
   background: url("../images/hero-bg.png") bottom center no-repeat;
   background-size: cover; }
@@ -657,7 +660,7 @@ body {
   content: "";
   position: absolute;
   display: block;
-  min-height: 980px;
+  height: 980px;
   width: 1157px;
   background: url("../images/hero-bg-wave.png") top left no-repeat;
   background-size: contain; }
@@ -667,7 +670,7 @@ body {
   height: auto;
   position: relative;
   padding-top: 319px;
-  box-sizing: border-box;
+  padding-left: 50px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -675,12 +678,19 @@ body {
   display: flex;
   flex-direction: column; }
 
+@media screen and (max-width: 480px) {
+  .hero-content {
+    padding-top: 200px; } }
+
 .hero-content-title {
-  height: 193px;
+  max-height: 193px;
   width: auto;
   text-transform: uppercase;
   letter-spacing: -2.35px;
   position: relative; }
+
+.hero-content-title h1 {
+  display: inline-block; }
 
 .hero-content-info {
   min-height: 72px;
@@ -693,13 +703,17 @@ body {
   margin-top: 26px; }
 
 .dot {
+  position: relative; }
+
+.dot::before {
+  display: block;
+  content: "";
   height: 20px;
   width: 20px;
   position: absolute;
-  top: 0;
-  right: 0;
+  bottom: 0;
+  right: -25px;
   background-color: #FF794D;
-  position: relative;
   border-radius: 50%; }
 
 .projects {
