@@ -154,26 +154,75 @@ body{
         position: absolute;
         display: block;
         height: 2275px;
-        min-height: 1600px;
         width: 100vw;
         background: url('../images/hero-bg.png') bottom center no-repeat;
         background-size: cover;
+
+        @media screen and (max-width: 1051px){
+            height: 2000px;
+        }
+        @media screen and (max-width: $breakpoint-md){
+            height: 1750px;
+        }
+        @media screen and (max-width: 615px){
+            height: 1500px;
+        }
+        @media screen and (max-width: $breakpoint-sm){
+            height: 2000px;
+        }
+        @media screen and (max-width: 345px){
+            height: 1850px;
+        }
+        @media screen and (max-width: 302px){
+            height: 1700px;
+        }
     }
 
     &-content-wrapper{
-        min-height: 980px;
-        background-position-y: -130px;
+        height: 980px;
         margin-right: 70px;
         position: relative;
+        
+        @media screen and (max-width: $breakpoint-md){
+            height: 850px;
+
+        }
+        @media screen and (max-width: 580px){
+            height: 700px;
+        }
+        @media screen and (max-width:323px){
+            height: 650px;
+        }
 
         &::before{
             content: "";
             position: absolute;
             display: block;
             height: 980px;
-            width: 1157px;
+            width: 100%;
             background: url('../images/hero-bg-wave.png') top left no-repeat;
             background-size: contain;
+
+            @media screen and (min-width: 2222px){    
+                height: 120%;
+            }
+            @media screen and (min-width: 2822px){    
+                height: 140%;
+            }
+
+            @media screen and (max-width: 883px){
+                background-size: 110%;
+                width: 100vw;
+            }
+            @media screen and (max-width: 524px){
+                background-size: 150%;
+            }
+            @media screen and (max-width: 411px){
+                background-size: 175%;
+            }
+            @media screen and (max-width: 350px){
+                background-size: 200%;
+            }
         }
     }
 
@@ -188,8 +237,11 @@ body{
         @include flexbox;
         flex-direction: column;
 
-        @media screen and (max-width: $breakpoint-sm){
+        @media screen and (max-width: $breakpoint-lg){
             padding-top: 200px;
+        }
+        @media screen and (max-width: $breakpoint-md){
+            padding-top: 100px;
         }
 
         &-title{
@@ -233,7 +285,6 @@ body{
 //projects
 
 .projects{
-    margin-top: -70px;
     position: relative;
     height: auto;
     width: auto;
@@ -243,6 +294,42 @@ body{
     max-width: 834px;
     height: auto;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 
+.testimonials{
+    height: 1080px;
+    max-width: 1600px;
+    position: relative;
+    background-color: $color-blue;
+    margin:  112px auto 0 auto;
+
+
+    &-content{
+        max-height:1080px;
+        height: 100%;
+    }
+
+}
+
+.services{
+    max-width: 1170px;
+    position: relative;
+    margin: 0 auto;
+    height: 670px;
+    background-color: salmon; 
+    transform: translateY(-50%);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    background-color: $color-white;
+    box-shadow: $box-shadow;
+
+    &-item{
+        height: 100%;
+        width: 100%;
+    }
+}
