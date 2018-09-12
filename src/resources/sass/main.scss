@@ -38,6 +38,9 @@ body{
     &-orange{
         background-color: $color-orange;
     }
+    &-blue{
+        background-color: $color-blue;
+    }
 
 }
 
@@ -380,18 +383,115 @@ body{
     position: relative;
     margin: 0 auto;
     height: 670px;
-    background-color: salmon; 
+    background-color: $color-white;
     transform: translateY(-50%);
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 
-    // background-color: $color-white;
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow; 
 
     &-item{
         height: 100%;
         width: 100%;
+        @include flexbox;
+        flex-direction: row;
+        position: relative;
+        align-items: center;
+        padding-left: 70px;
+        box-sizing: border-box;
+        border: 1px solid #DBDEE5;
+
+        &-title{}
+        &-info{}
+        &-cta{
+            height: auto;
+            width: 100%;
+            a{ 
+                color: #3A78FF;
+                @include fontSize(12);
+                letter-spacing: 0.5px;
+                font-weight: $font-weight-bold;
+                font-family: $font-family-header;
+                text-transform: uppercase;
+
+                svg{
+                    transform: translate(0 , 22.5%);
+
+                    margin-left: 8px;
+                    transition: $transition;
+                }
+
+                &:hover{
+                    svg{
+                    transition: $transition;
+                    transform: translate(10px ,22.5%);
+                    }
+                }
+            }
+        }
+    }
+
+    &-left{
+        max-width: 74px;
+        height: 149px;
+        margin-right: 40px; 
+        
+
+        .icon-bg{
+            height: 74px;
+            width: 74px;
+            position: relative;
+            border-radius: 50%;
+
+            svg{
+                position: absolute;
+                left: 50%;
+                top:50%;
+                transform: translate(-50%, -50%);
+            }
+            &-blue{
+                background-image: linear-gradient(to top, #3c8bff, #3f99ff, #4aa6ff, #5bb3ff, #6fbfff);
+            }
+            &-green{
+                background-image: linear-gradient(to top, #67d591, #75db9e, #84e1ab, #92e6b8, #a1ecc4);
+            }
+            &-orange{
+                background-image: linear-gradient(to top, #ff7d54, #ff8c61, #ff9a6f, #ffa77d, #ffb48d);
+            }
+            &-purple{
+                background-image: linear-gradient(to top, #704ce4, #855feb, #9872f2, #aa85f8, #bb98ff);
+            }
+        }
+    }
+    &-right{
+        max-width: 355px;
+        height: 149px;
+        @include flexbox;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.codepen{
+
+    &-title{
+        text-align: center;
+    }
+
+    &-content{
+        max-width: 100%;
+        height: 500px;
+        position: relative;
+        @include flexbox;
+        flex-direction: row;
+
+        &-item{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            position: relative; 
+        }
     }
 }
