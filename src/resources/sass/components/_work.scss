@@ -25,6 +25,7 @@
         width: 100%;
         height: auto;
         overflow: hidden;
+        
 
         img{
             transition: $transition;
@@ -32,7 +33,7 @@
             height: auto;
             &:hover{
                 cursor: pointer;
-                transform: scale(1.2);
+                transform: scale(1.05);
                 transition: $transition;
             }
         }
@@ -46,4 +47,9 @@
 
         p{margin-top:4px;}
     }
+}
+
+#autumn{
+    background: url("../resources/images/Autumn-img.png") center center no-repeat;
+    background-size: cover;
 }
