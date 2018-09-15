@@ -785,7 +785,8 @@ body {
 .projects {
   position: relative;
   height: auto;
-  width: auto; }
+  width: auto;
+  margin-bottom: 100px; }
 
 .projects-title {
   text-align: center;
@@ -955,10 +956,9 @@ body {
   text-align: center; }
 
 .codepen-content {
-  width: 1170px;
-  height: 500px;
+  max-width: 1170px;
+  min-height: 500px;
   position: relative;
-  border: 1px solid green;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -966,12 +966,27 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box; }
+
+@media screen and (max-width: 480px) {
+  .codepen-content {
+    flex-direction: column;
+    justify-content: center; } }
 
 .codepen-content-item {
   max-height: 603px;
   max-width: 370px;
-  position: relative; }
+  min-width: 250px;
+  position: relative;
+  flex: 1;
+  margin-right: 30px;
+  margin-bottom: 30px; }
+
+@media screen and (max-width: 846px) {
+  .codepen-content-item {
+    margin: 0 auto 30px auto; } }
 
 .item-img img {
   height: auto;

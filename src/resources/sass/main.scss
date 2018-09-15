@@ -291,6 +291,8 @@ body{
     position: relative;
     height: auto;
     width: auto;
+
+    margin-bottom: 100px;
 }
 .projects-title{
     text-align: center;
@@ -481,19 +483,33 @@ body{
     }
 
     &-content{
-        width: 1170px;
-        height: 500px;
+        max-width: 1170px;
+        min-height: 500px;
         position: relative;
-        border: 1px solid green;
         @include flexbox;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+
+        @media screen and (max-width: $breakpoint-sm){
+            flex-direction: column;
+            justify-content: center;
+
+        }
 
         &-item{
             max-height: 603px;
             max-width: 370px;
+            min-width: 250px;
             position: relative; 
+            flex:1;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            @media screen and (max-width: 846px){
+                margin: 0 auto 30px auto;
+            }
         }
     }
 }
