@@ -29,6 +29,7 @@ body{
     color: $color-white !important;
 }
 
+
 .divider{
     height: 2px;
     width: 87px;
@@ -302,6 +303,29 @@ body{
     padding: 0 20px;
 }
 
+.projects, .codepen{
+    &-link{
+        height: auto;
+        width: auto;
+        position: relative;
+        margin-top: 50px;
+        a{
+
+            svg{
+                margin-left: 20px;
+                transform: translate(0, 0);
+                transition: $transition;
+            }
+
+            &:hover{
+                svg{
+                    transform: translate(15px, 0);
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}
 
 .testimonials{
     height: 1080px;
@@ -477,7 +501,7 @@ body{
 }
 
 .codepen{
-
+    margin-top: 150px;
     &-title{
         text-align: center;
     }
@@ -523,4 +547,14 @@ body{
         height: auto;
         width: 100%;
     }
+}
+
+.footer{
+    height: 250px;
+    width: auto;
+    position: relative;
+
+    margin-top: 150px;
+
+    background-color: $color-blue;
 }

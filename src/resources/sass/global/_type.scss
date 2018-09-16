@@ -49,6 +49,10 @@ p{
 .heading{
     @include font($font-family-header, $color-white, $font-weight-light, 36px);
     @include fontSize(24);
+
+    &-black{
+        color: $color-h3;
+    }
 }
 
 .tag{

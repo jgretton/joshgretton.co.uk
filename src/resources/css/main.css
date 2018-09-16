@@ -445,6 +445,9 @@ p {
   font-size: 24;
   font-size: 1.5rem; }
 
+.heading-black {
+  color: #363D4F; }
+
 .tag {
   font-family: "Poppins", sans-serif;
   color: #6D7783;
@@ -502,6 +505,7 @@ a:hover {
 .work-img {
   width: 100%;
   height: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden; }
 
 .work-img img {
@@ -795,6 +799,21 @@ body {
   margin: 0 auto;
   padding: 0 20px; }
 
+.projects-link, .codepen-link {
+  height: auto;
+  width: auto;
+  position: relative;
+  margin-top: 50px; }
+
+.projects-link a svg, .codepen-link a svg {
+  margin-left: 20px;
+  transform: translate(0, 0);
+  transition: all 300ms ease-in-out; }
+
+.projects-link a:hover svg, .codepen-link a:hover svg {
+  transform: translate(15px, 0);
+  transition: all 300ms ease-in-out; }
+
 .testimonials {
   height: 1080px;
   max-width: 1600px;
@@ -952,6 +971,9 @@ body {
   flex-direction: column;
   justify-content: space-between; }
 
+.codepen {
+  margin-top: 150px; }
+
 .codepen-title {
   text-align: center; }
 
@@ -996,3 +1018,10 @@ body {
   text-align: center;
   height: auto;
   width: 100%; }
+
+.footer {
+  height: 250px;
+  width: auto;
+  position: relative;
+  margin-top: 150px;
+  background-color: #071FC8; }
