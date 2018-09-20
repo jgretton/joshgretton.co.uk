@@ -14,7 +14,7 @@ body{
     z-index: 999;
 }
 .darken{
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, 1);
     transition: $transition;
     overflow: hidden;
 }
@@ -80,6 +80,7 @@ body{
     &.close{
 
         .bar{
+            background-color: $color-black;
             &:nth-last-of-type(2){
                 opacity: 0;
             }
@@ -89,6 +90,11 @@ body{
 
     @media screen and (max-width:$breakpoint-sm){
         right: 0;
+    }
+    @media screen and(max-width:883px){
+        .bar{
+        background-color: $color-black;
+        }
     }
 }
 
@@ -115,7 +121,7 @@ body{
 
 .nav{
     height: 100vh;
-    width: 200px;
+    width: 30%;
     background-color: $color-white;
     @include flexbox;
     flex-direction: column;
@@ -549,12 +555,33 @@ body{
     }
 }
 
+//footer
 .footer{
-    height: 250px;
-    width: auto;
+    height: 70px;
+    width: 100%;
     position: relative;
-
     margin-top: 150px;
-
     background-color: $color-blue;
+
+    .container{
+        @include flexbox;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    &-social{
+        ul{
+            @include flexbox;
+            flex-direction: row;
+            list-style: none;
+            li{
+                width: auto;
+                display: block;
+                height: auto;
+                margin-right: 20px;
+            }
+        }
+    }
 }

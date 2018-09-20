@@ -10,8 +10,8 @@ menu.addEventListener('click', toggleMenu);
 function toggleMenu(){
     if(!showMenu){
         nav.classList.add('open');
-        menu.classList.add('close')
-        body.classList.add('darken')
+        menu.classList.add('close');
+        body.classList.add('darken');
 
         showMenu = true;
     }
