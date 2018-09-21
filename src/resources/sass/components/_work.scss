@@ -1,8 +1,8 @@
 .work-list{
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(auto, 537px));
-    grid-template-rows: repeat( auto-fill, minmax(1fr,637px));
+    grid-template-columns: repeat(2, minmax(0, 537px));
+    grid-template-rows: repeat(3, minmax(1fr,637px));
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     padding: 0 10px;
