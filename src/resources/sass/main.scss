@@ -435,8 +435,6 @@ body{
         box-sizing: border-box;
         border: 1px solid #DBDEE5;
 
-        &-title{}
-        &-info{}
         &-cta{
             height: auto;
             width: 100%;
@@ -546,7 +544,20 @@ body{
 
 .item-{
     &img{
-        img{height: auto; width: 100%;}
+        overflow: hidden;
+        height: auto;
+        width: 100%;
+        img{
+            transition: $transition;
+            width: 100%;
+            height: auto;
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.05);
+                transition: $transition;
+            }
+        }
     }
     &info{
         text-align: center;
@@ -562,6 +573,11 @@ body{
     position: relative;
     margin-top: 150px;
     background-color: $color-blue;
+    overflow: hidden;
+
+    @media screen and (max-width: $breakpoint-md){
+
+    }
 
     .container{
         @include flexbox;
