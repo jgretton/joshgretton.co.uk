@@ -4,7 +4,8 @@
   "description": "gulpfile includes everything required for a project. Compiles the Scss, Minifies the Css, Autoprefixes the Css, Optimises the images, auto reloads the browser upon changes to your files ",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Josh Gretton",
   "license": "ISC",
@@ -20,5 +21,14 @@
   },
   "dependencies": {
     "lightbox2": "^2.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgretton/joshgretton.co.uk.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/jgretton/joshgretton.co.uk/issues"
+  },
+  "homepage": "https://jgretton.github.com/joshgretton.co.uk"
 }
