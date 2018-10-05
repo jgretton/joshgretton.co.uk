@@ -177,14 +177,20 @@ body{
         @media screen and (max-width: 615px){
             height: 1500px;
         }
-        @media screen and (max-width: $breakpoint-sm){
-            height: 2000px;
+        @media screen and (max-width: 496px){
+            height: 1400px;
         }
         @media screen and (max-width: 345px){
             height: 1850px;
         }
-        @media screen and (max-width: 302px){
+        @media screen and (max-width: 330px){
+            height: 1750px;
+        }
+        @media screen and (max-width: 310px){
             height: 1700px;
+        }
+        @media screen and (max-width: 290px){
+            height: 1600px;
         }
     }
 
@@ -315,12 +321,16 @@ body{
         width: auto;
         position: relative;
         margin-top: 50px;
+        padding: 0 20px;
         a{
 
             svg{
                 margin-left: 20px;
                 transform: translate(0, 0);
                 transition: $transition;
+                @media screen and (max-width: $breakpoint-sm){
+                    margin-left: 10px;
+                }
             }
 
             &:hover{

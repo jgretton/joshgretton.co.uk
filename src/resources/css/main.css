@@ -453,6 +453,11 @@ p {
     font-size: 18;
     font-size: 1.125rem; } }
 
+@media screen and (max-width: 330px) {
+  .heading {
+    font-size: 16;
+    font-size: 1rem; } }
+
 .tag {
   font-family: "Poppins", sans-serif;
   color: #6D7783;
@@ -680,17 +685,25 @@ body {
   .hero::before {
     height: 1500px; } }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 496px) {
   .hero::before {
-    height: 2000px; } }
+    height: 1400px; } }
 
 @media screen and (max-width: 345px) {
   .hero::before {
     height: 1850px; } }
 
-@media screen and (max-width: 302px) {
+@media screen and (max-width: 330px) {
+  .hero::before {
+    height: 1750px; } }
+
+@media screen and (max-width: 310px) {
   .hero::before {
     height: 1700px; } }
+
+@media screen and (max-width: 290px) {
+  .hero::before {
+    height: 1600px; } }
 
 .hero-content-wrapper {
   height: 980px;
@@ -815,12 +828,17 @@ body {
   height: auto;
   width: auto;
   position: relative;
-  margin-top: 50px; }
+  margin-top: 50px;
+  padding: 0 20px; }
 
 .projects-link a svg, .codepen-link a svg {
   margin-left: 20px;
   transform: translate(0, 0);
   transition: all 300ms ease-in-out; }
+
+@media screen and (max-width: 480px) {
+  .projects-link a svg, .codepen-link a svg {
+    margin-left: 10px; } }
 
 .projects-link a:hover svg, .codepen-link a:hover svg {
   transform: translate(15px, 0);
