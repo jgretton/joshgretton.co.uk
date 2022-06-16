@@ -16,8 +16,16 @@ export default function Home() {
 
       <header className=" ">
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-        {/* <Hero isOpen={isOpen} /> */}
+        <Hero isOpen={isOpen} />
       </header>
+
+      <main
+        className={
+          isOpen
+            ? " xl:container xl:mx-auto sm:mt-v60 mt-96 dark:bg-gray-700 dark:text-white bg-white sm:px-10 transition-opacity duration-700 opacity-0"
+            : "xl:container xl:mx-auto sm:mt-v60 mt-96 dark:bg-gray-700 dark:text-white bg-white sm:px-10  transition-opacity  duration-300 opacity-100"
+        }
+      ></main>
 
       {/* <footer className="">
         <a
