@@ -9,7 +9,8 @@ const Hero = ({ isOpen }) => {
     >
       <h2 className="tracking-widest md:text-5xl font-light text-2xl sm:text-4xl">
         Hi! - My name is <span className="text-blue-300">Josh</span>. <br />
-        I'm a <span className="text-blue-300">Developer </span> based <br />
+        I&apos;m a <span className="text-blue-300">Developer </span> based
+        <br />
         in the UK.
       </h2>
     </div>
