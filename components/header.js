@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const Header = ({ isOpen, setIsOpen }) => {
-  console.log(isOpen);
   const links = [
     {
       title: "About",
