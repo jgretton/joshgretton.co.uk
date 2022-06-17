@@ -1,12 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import TopOfPage from "../components/topOfPage";
-import Hero from "./hero";
-import LiveProjects from "./liveProjects";
-import Work from "./work";
+import Hero from "./_hero";
+import LiveProjects from "./_liveProjects";
+import Work from "./_work";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,10 +36,7 @@ export default function Home() {
 
       <footer>
         <Footer />
-      </footer>
-
-      {/* <footer className="">
-        <a
+        {/* <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
@@ -49,7 +45,10 @@ export default function Home() {
           <span className="">
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
-        </a>
+        </a> */}
+      </footer>
+
+      {/* <footer className="">
       </footer> */}
     </div>
   );

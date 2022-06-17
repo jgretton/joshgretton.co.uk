@@ -1,6 +1,6 @@
 import * as React from "react";
 import Header from "../components/header";
-import Hero from "./hero";
+import Hero from "./_hero";
 import Footer from "../components/footer";
 import TopOfPage from "../components/topOfPage";
 import { useState } from "react";
