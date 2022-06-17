@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
+import Footer from "../components/footer";
 import Header from "../components/header";
 import TopOfPage from "../components/topOfPage";
 import Hero from "./hero";
@@ -33,6 +34,10 @@ export default function Home() {
         <LiveProjects />
         <Work />
       </main>
+
+      <footer>
+        <Footer />
+      </footer>
 
       {/* <footer className="">
         <a
