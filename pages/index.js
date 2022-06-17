@@ -5,6 +5,7 @@ import Header from "../components/header";
 import TopOfPage from "../components/topOfPage";
 import Hero from "./hero";
 import LiveProjects from "./liveProjects";
+import Work from "./work";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,7 @@ export default function Home() {
         }
       >
         <LiveProjects />
+        <Work />
       </main>
 
       {/* <footer className="">
