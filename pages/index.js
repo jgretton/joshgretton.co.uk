@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Header from "../components/header";
 import Hero from "./hero";
+import LiveProjects from "./liveProjects";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,10 +23,12 @@ export default function Home() {
       <main
         className={
           isOpen
-            ? " xl:container xl:mx-auto sm:mt-v60 mt-96 dark:bg-gray-700 dark:text-white bg-white sm:px-10 transition-opacity duration-700 opacity-0"
-            : "xl:container xl:mx-auto sm:mt-v60 mt-96 dark:bg-gray-700 dark:text-white bg-white sm:px-10  transition-opacity  duration-300 opacity-100"
+            ? " xl:container xl:mx-auto sm:mt-v60 mt-96   bg-white sm:px-10 transition-opacity duration-700 opacity-0"
+            : "xl:container xl:mx-auto sm:mt-v60 mt-96   bg-white sm:px-10  transition-opacity  duration-300 opacity-100"
         }
-      ></main>
+      >
+        <LiveProjects />
+      </main>
 
       {/* <footer className="">
         <a
