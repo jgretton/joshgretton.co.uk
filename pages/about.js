@@ -34,8 +34,9 @@ const AboutPage = () => {
             <div className="lg:w-1/3 w-4/6 relative lg:h-full sm:h-1/2 lg:self-center md:self-start self-center">
               <Image
                 src={PhotoOfMe}
-                alt="me"
+                alt="Photo of me"
                 className="lg:h-full md:w-full h-1/3 lg:object-cover lg:object-top object-contain rounded-2xl "
+                priority
               />
             </div>
             <div className="mt-5 lg:w-2/3 w-full h-auto bottom-0 left-0 right-0  px-4 relative">
@@ -51,7 +52,6 @@ const AboutPage = () => {
               </p>
 
               <p className="text-base font-normal tracking-wider my-10">
-                {" "}
                 Languages and frameworks I am confident with:
               </p>
               <div className="flex flex-row flex-wrap">
