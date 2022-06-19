@@ -66,7 +66,8 @@ const AboutPage = () => {
                         src={language.icon}
                         alt={language.title}
                         className={`w-6 h-6 `}
-                        loading="lazy"
+                        priority
+                        placeholder="blur"
                       />
                       <p className="self-center pl-2">{language.title} </p>
                     </span>
