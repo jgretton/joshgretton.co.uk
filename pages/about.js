@@ -37,6 +37,7 @@ const AboutPage = () => {
                 alt="Photo of me"
                 className="lg:h-full md:w-full h-1/3 lg:object-cover lg:object-top object-contain rounded-2xl "
                 priority
+                placeholder="blur"
               />
             </div>
             <div className="mt-5 lg:w-2/3 w-full h-auto bottom-0 left-0 right-0  px-4 relative">
@@ -65,6 +66,7 @@ const AboutPage = () => {
                         src={language.icon}
                         alt={language.title}
                         className={`w-6 h-6 `}
+                        loading="lazy"
                       />
                       <p className="self-center pl-2">{language.title} </p>
                     </span>

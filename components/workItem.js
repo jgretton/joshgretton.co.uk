@@ -10,7 +10,7 @@ const WorkItem = ({ img, title, tags, github_URL, live_URL, alt }) => {
           alt={alt}
           className="h-full w-full object-cover object-top rounded-t-lg"
           layout="fill"
-          priority
+          loading="lazy"
         />
       </div>
       <div className="mt-5 h-auto bg-white transition-all duration-200 transform group-hover:translate-y-0 md:relative md:translate-y-0 ">
