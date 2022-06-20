@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const WorkItem = ({ img, title, tags, github_URL, live_URL, alt }) => {
+  const router = useRouter();
   return (
-    <div>
-      <div className=" group w-full relative sm:h-134 h-80 ">
+    <div onClick={() => router.push("/projects")}>
+      <div className=" group w-full relative sm:h-134 h-80 cursor-pointer ">
         <Image
           src={img}
           alt={alt}
